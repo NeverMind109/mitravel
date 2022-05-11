@@ -1,0 +1,6 @@
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  background-image: url("../img/hero-bg.jpg");
+  @include bg-cover;
+}
