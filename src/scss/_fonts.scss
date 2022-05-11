@@ -1,1 +1,9 @@
-// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@include font-face("SFProDisplay", "../fonts/SFProDisplay", 700, normal);
+@include font-face("SFProDisplay", "../fonts/SFProDisplay-Heavy", 800, normal);
+@include font-face("SFProDisplay", "../fonts/SFProDisplay-Medium", 500, normal);
+@include font-face("SFProText", "../fonts/SFProText-Regular", 400, normal);
+
+@include font-face("Helvetica", "../fonts/HelveticaNeue-Bold", 700, normal);
+@include font-face("Playfair", "../fonts/PlayfairDisplay-Regular", 400, normal);
+@include font-face("SFCompact", "../fonts/SFCompactText-Light", 300, normal);
+@include font-face("SFCompact", "../fonts/SFCompactText-Regular", 400, normal);

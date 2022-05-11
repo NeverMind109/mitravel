@@ -2,11 +2,14 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
+  --font-family: "SFProDisplay", sans-serif;
   --content-width: 1566px;
   --container-offset: 30px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
   --color-white: #fff;
+  --color-dark: #1c2e3d;
+  --color-accent: #e8594e;
+  --color-neptune: #73afba;
 }
