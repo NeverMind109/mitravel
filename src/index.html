@@ -5,7 +5,10 @@
   <body class="page__body">
     <div class="site-container">
       @include('partials/header.html')
-      <main class="main">@include('partials/hero.html')</main>
+      <main class="main">
+        @include('partials/hero.html') @include('partials/become.html')
+        @include('partials/featured.html')
+      </main>
 
       @include('partials/footer.html')
       <!-- @include('html/h1.html') пример include -->
