@@ -39,6 +39,30 @@
     position: relative;
     z-index: 5;
     background-color: var(--color-accent);
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: var(--color-accent-hover);
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
+  &__slider {
+    position: relative;
+    .hero__slider-btn {
+      position: absolute;
+      z-index: 50;
+      width: 14px;
+      height: 14px;
+      @include bg-cover;
+      bottom: 53px;
+    }
+    .hero-btn-right {
+      background-image: url("../img/arrow-right.svg");
+      right: 50px;
+    }
+    .hero-btn-left {
+      background-image: url("../img/arrow-left.svg");
+      left: 50px;
+    }
   }
   &__bottom {
     position: absolute;
@@ -82,9 +106,11 @@
     top: 50%;
     transform: translateY(-50%);
     width: 18px;
-    height: 20px;
+    height: 18px;
     background-image: url("../img/search.svg");
-    @include bg-cover;
+    background-size: 18px 18px;
+    background-position: center right;
+    background-repeat: no-repeat;
   }
 }
 .main-slider {
@@ -93,9 +119,23 @@
   border-top-right-radius: 8px;
   font-size: 0;
   &__media {
+    position: relative;
+    max-height: 275px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    height: 42px;
+    width: 32px;
+    background-image: url("../img/hero-play-btn-white.svg");
+    @include bg-cover;
+  }
   &__text {
+    position: relative;
     height: 120px;
     @include flex-all-center;
     font-weight: 400;

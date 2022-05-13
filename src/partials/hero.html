@@ -24,8 +24,28 @@
         ></button>
       </form>
       <div class="hero__slider main-slider">
-        <div class="swiper-container">
+        <div class="swiper-container main-slider__swiper">
+          <button class="hero__slider-btn btn-reset hero-btn-left"></button>
+          <button class="hero__slider-btn btn-reset hero-btn-right"></button>
           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="main-slider__media">
+                <img src="img/slider-1.jpg" alt="Mountains" />
+              </div>
+              <p class="main-slider__text">wonderful moutain</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-slider__media">
+                <button class="main-slider__play btn-reset"></button>
+                <video
+                  class="main-slider__video"
+                  src="Waterfall.mp4"
+                  muted
+                  playsinline
+                ></video>
+              </div>
+              <p class="main-slider__text">wonderful moutain</p>
+            </div>
             <div class="swiper-slide">
               <div class="main-slider__media">
                 <img src="img/slider-1.jpg" alt="Mountains" />

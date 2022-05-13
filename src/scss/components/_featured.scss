@@ -40,6 +40,11 @@
     background-color: var(--color-accent);
     border-radius: 100px;
     margin-bottom: 20px;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: var(--color-accent-hover);
+      transition: background-color 0.3s ease-in-out;
+    }
   }
   &__title {
     max-width: 40%;
@@ -60,6 +65,12 @@
   &__link {
     display: inline-block;
     background-color: var(--color-neptune);
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-neptune-hover);
+      transition: background-color 0.3s ease-in-out;
+    }
   }
 }
 .feature-list {
@@ -96,6 +107,11 @@
     line-height: 24px;
     color: var(--color-white);
     margin-bottom: 8px;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: var(--color-gray-hover);
+      transition: color 0.3s ease-in-out;
+    }
   }
   &__time {
     font-family: "SFProText", sans-serif;

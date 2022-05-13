@@ -64,5 +64,11 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     margin-top: 74px;
+    background-color: var(--color-neptune);
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: var(--color-neptune-hover);
+      transition: background-color 0.3s ease-in-out;
+    }
   }
 }
