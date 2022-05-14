@@ -142,6 +142,10 @@ a {
   font-size: 64px;
   line-height: 80px;
   color: var(--color-dark);
+  @include smalltablet {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .section-title--center {
@@ -153,8 +157,13 @@ a {
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 2.18182px;
+  text-align: center;
   text-transform: uppercase;
   color: var(--color-white);
   padding: 35px 80px;
   border-radius: 8px;
+  @include mobile {
+    padding: 25px 20px;
+    width: 100%;
+  }
 }

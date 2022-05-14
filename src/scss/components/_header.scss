@@ -10,6 +10,11 @@
     justify-content: space-between;
     align-items: center;
   }
+  .social {
+    @include mobile {
+      display: none;
+    }
+  }
 }
 .burger {
   @include burger;
@@ -28,6 +33,10 @@
   &__item {
     &:not(:last-child) {
       margin-right: 40px;
+
+      @include mobile {
+        margin-right: 17px;
+      }
     }
   }
   &__link {

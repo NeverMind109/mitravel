@@ -3,7 +3,7 @@ import Swiper, { Navigation, Pagination } from "swiper";
 Swiper.use([Navigation, Pagination]);
 
 const featuredVideos = document.querySelector(".slider-container");
-const heroMedia = document.querySelector(".main-slider__swiper");
+const heroMedia = document.querySelector(".swiper-container");
 const heroPlay = document.querySelectorAll(".main-slider__play");
 
 heroPlay.forEach((el) => {
@@ -22,8 +22,13 @@ heroPlay.forEach((el) => {
 const featuredVideosSlider = new Swiper(featuredVideos, {
   loop: true,
   centeredSlides: true,
-  spaceBetween: 105,
+  spaceBetween: 50,
   slidesPerView: auto,
+  breakpoints: {
+    768: {
+      spaceBetween: 105,
+    },
+  },
 });
 
 const heroMediaSlider = new Swiper(heroMedia, {

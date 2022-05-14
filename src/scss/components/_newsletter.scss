@@ -9,13 +9,43 @@
     padding: 338px var(--newsletter-gap) 178px;
     background-image: url("../img/newsletter-bg.jpg");
     @include bg-cover;
+
+    @include bigdesktop {
+      --newsletter-gap: 60px;
+    }
+    @include desktop {
+      --newsletter-gap: 30px;
+    }
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px var(--newsletter-gap) 178px;
+    }
+    @include mobile {
+      --newsletter-gap: 10px;
+      padding: 30px var(--newsletter-gap) 40px;
+    }
   }
   &__text {
     max-width: 375px;
+
+    @include tablet {
+      max-width: none;
+      text-align: center;
+      margin-bottom: 40px;
+    }
   }
   &__title {
     color: var(--color-white);
     margin-bottom: 40px;
+
+    @include tablet {
+      color: #000;
+    }
+    @include mobile {
+      margin-bottom: 25px;
+    }
   }
   &__descr {
     font-family: "SFCompact", sans-serif;
@@ -23,11 +53,35 @@
     font-size: 16px;
     line-height: 21px;
     color: var(--color-white);
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 18px;
+      color: #000;
+    }
+    @include smalltablet {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
   &__form {
     position: absolute;
     bottom: -96px;
     right: var(--newsletter-gap);
+
+    @include desktop {
+      bottom: -31px;
+    }
+    @include tablet {
+      position: static;
+    }
+  }
+
+  @include tablet {
+    padding: 50px 0;
+  }
+  @include mobile {
+    padding: 30px 0;
   }
 }
 .subscribe-form {
@@ -37,8 +91,21 @@
   width: 501px;
   height: 416px;
   background: var(--color-white);
-  border-radius: 8px 8px 0px 0px;
+  border-radius: 8px;
   padding-top: 53px;
+
+  @include desktop {
+    width: 400px;
+    height: 350px;
+  }
+  @include smalltablet {
+    width: 350px;
+  }
+  @include mobile {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
 
   &__field {
     width: calc(100% - (72px * 2));
@@ -56,6 +123,10 @@
       letter-spacing: 2px;
       color: var(--color-dark);
     }
+    @include mobile {
+      width: 90%;
+      padding: 15px 0;
+    }
   }
   &__btn {
     width: 100%;
@@ -69,6 +140,14 @@
     &:hover {
       background-color: var(--color-neptune-hover);
       transition: background-color 0.3s ease-in-out;
+    }
+
+    @include smalltablet {
+      margin-top: 50px;
+    }
+    @include mobile {
+      padding: 40px 20px;
+      margin-top: 30px;
     }
   }
 }

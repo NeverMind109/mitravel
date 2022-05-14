@@ -4,12 +4,27 @@
   left: -150vw;
   width: 75%;
   height: 100%;
+  min-height: 550px;
   z-index: 1000;
   background-color: var(--color-neptune);
   transition: left 0.3s;
   &--active {
     left: 0;
     transition: left 0.3s;
+  }
+  .social {
+    display: none;
+    @include mobile {
+      display: flex;
+      padding: 40px 0;
+      &__item {
+        &:not(:last-child) {
+          @include mobile {
+            margin-right: 40px;
+          }
+        }
+      }
+    }
   }
   &__nav {
     width: 100%;
@@ -24,6 +39,15 @@
     justify-content: center;
     padding: 30px 0;
     overflow-y: auto;
+
+    @include smalltablet {
+      justify-content: flex-start;
+      padding: 70px 0;
+    }
+    @include mobile {
+      justify-content: flex-start;
+      padding: 70px 0;
+    }
   }
   &__link {
     display: inline-block;
@@ -36,5 +60,19 @@
       color: var(--color-gray-hover);
       transition: color 0.2s ease-in-out;
     }
+
+    @include smalltablet {
+      font-size: 35px;
+    }
+    @include mobile {
+      font-size: 30px;
+    }
+  }
+
+  @include smalltablet {
+    bottom: 0;
+    top: auto;
+    height: 85%;
+    width: 100%;
   }
 }

@@ -26,6 +26,19 @@
     font-size: 80px;
     line-height: 84px;
     margin-bottom: 40px;
+
+    @include desktop {
+      max-width: 50%;
+    }
+    @include smalltablet {
+      max-width: 75%;
+      font-size: 50px;
+      line-height: 55px;
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      max-width: none;
+    }
   }
   &__descr {
     max-width: 32%;
@@ -34,6 +47,19 @@
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 57px;
+
+    @include desktop {
+      max-width: 50%;
+    }
+    @include smalltablet {
+      max-width: 75%;
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      max-width: none;
+    }
   }
   &__btn {
     position: relative;
@@ -53,15 +79,48 @@
       width: 14px;
       height: 14px;
       @include bg-cover;
-      bottom: 53px;
+      bottom: 36px;
+
+      @include smalltablet {
+        display: none;
+      }
+      @include mobile {
+        display: block;
+      }
     }
     .hero-btn-right {
       background-image: url("../img/arrow-right.svg");
       right: 50px;
+
+      @include desktop {
+        right: 30px;
+      }
+      @include tablet {
+        right: 10px;
+      }
+      @include mobile {
+        right: 30px;
+      }
+      @include minimobile {
+        right: 15px;
+      }
     }
     .hero-btn-left {
       background-image: url("../img/arrow-left.svg");
       left: 50px;
+
+      @include desktop {
+        left: 30px;
+      }
+      @include tablet {
+        left: 10px;
+      }
+      @include mobile {
+        left: 30px;
+      }
+      @include minimobile {
+        left: 15px;
+      }
     }
   }
   &__bottom {
@@ -72,6 +131,20 @@
     width: calc(100% - 60px);
     display: flex;
     align-items: flex-end;
+
+    @include mobile {
+      position: static;
+      transform: none;
+      width: 100%;
+      flex-direction: column-reverse;
+      align-items: stretch;
+      margin-top: 50px;
+    }
+  }
+
+  @include mobile {
+    min-height: auto;
+    height: auto;
   }
 }
 .search-form {
@@ -99,6 +172,11 @@
       line-height: 19px;
       color: var(--color-dark);
     }
+
+    @include mobile {
+      padding-left: 20px;
+      padding-right: 48px;
+    }
   }
   &__button {
     position: absolute;
@@ -111,6 +189,14 @@
     background-size: 18px 18px;
     background-position: center right;
     background-repeat: no-repeat;
+
+    @include mobile {
+      right: 20px;
+    }
+  }
+
+  @include mobile {
+    width: 100%;
   }
 }
 .main-slider {
@@ -118,10 +204,32 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   font-size: 0;
+  .swiper-container {
+    @include mobile {
+      width: 100%;
+    }
+  }
   &__media {
     position: relative;
-    max-height: 275px;
+    height: 275px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include desktop {
+      height: 230px;
+    }
+    @include tablet {
+      height: 150px;
+    }
+    @include smalltablet {
+      height: 120px;
+    }
+    @include mobile {
+      height: 170px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
   }
   &__play {
     position: absolute;
@@ -149,7 +257,7 @@
   }
 }
 
-@media (max-height: 1079px) {
+@media (max-height: 1079px) and (max-width: 1500px) {
   .hero {
     padding-top: 120px;
     &__container {
@@ -157,9 +265,8 @@
     }
   }
 }
-@media (max-height: 880px) {
+@media (max-height: 880px) and (max-width: 1200px) {
   .hero {
-    padding-top: 100px;
     &__link {
       margin-bottom: 30px;
     }
@@ -171,12 +278,14 @@
 }
 @media (max-height: 780px) {
   .hero {
-    padding-top: 100px;
     &__title {
-      font-size: 60px;
-      margin-bottom: 30px;
+      max-width: none;
+      font-size: 50px;
+      line-height: 55px;
+      margin-bottom: 25px;
     }
     &__descr {
+      max-width: none;
       font-size: 12px;
       margin-bottom: 30px;
     }

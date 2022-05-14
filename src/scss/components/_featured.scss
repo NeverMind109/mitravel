@@ -3,6 +3,11 @@
   background-image: url("../img/featured-bg.jpg");
   @include bg-cover;
   height: 1080px;
+
+  @include tablet {
+    height: auto;
+    padding-top: 40px;
+  }
   &__container {
     height: 100%;
     display: flex;
@@ -17,12 +22,33 @@
     width: 35.3%;
     background-color: rgba(#3c4a51, 0.9);
     padding: 126px 133px;
+
+    @include bigdesktop {
+      width: 40%;
+      padding: 80px 40px;
+    }
+    @include desktop {
+      width: 45%;
+    }
+    @include tablet {
+      position: static;
+      width: 100%;
+      padding: 40px 60px;
+    }
+    @include smalltablet {
+      padding: 20px;
+    }
   }
   &__title {
     font-size: 64px;
     line-height: 80px;
     color: var(--color-white);
     margin-bottom: 64px;
+    @include smalltablet {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 30px;
+    }
   }
 }
 .blog-article {
@@ -52,6 +78,12 @@
     line-height: 64px;
     color: var(--color-white);
     margin-bottom: 18px;
+    @include smalltablet {
+      max-width: none;
+      width: 100%;
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
   &__descr {
     max-width: 40%;
@@ -61,6 +93,14 @@
     line-height: 21px;
     color: var(--color-white);
     margin-bottom: 40px;
+
+    @include smalltablet {
+      max-width: none;
+      width: 100%;
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 25px;
+    }
   }
   &__link {
     display: inline-block;
@@ -71,6 +111,10 @@
       background-color: var(--color-neptune-hover);
       transition: background-color 0.3s ease-in-out;
     }
+  }
+
+  @include smalltablet {
+    padding-bottom: 75px;
   }
 }
 .feature-list {
@@ -86,6 +130,9 @@
     align-items: flex-start;
     border-bottom: 1px solid rgba(#e3e3e3, 0.1);
     padding: 30px 0;
+    @include smalltablet {
+      padding: 15px 0;
+    }
   }
   &__image {
     flex-shrink: 0;
@@ -101,6 +148,11 @@
   &__text {
     margin-left: 32px;
     padding-right: 27px;
+
+    @include smalltablet {
+      margin-left: 15px;
+      padding-right: 0;
+    }
   }
   &__title {
     font-size: 18px;
